@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 interface Polygon {
     void setSides(int[] sides);
+
     void showPerimeter();
 }
 
 class Square implements Polygon {
     private int[] sides = new int[4];
     private float perimeter;
-
 
     public void setSides(int[] sides) {
         this.sides = sides;
@@ -18,7 +18,6 @@ class Square implements Polygon {
         }
     }
 
-  
     public void showPerimeter() {
         System.out.println("Perimeter: " + perimeter);
     }
@@ -34,7 +33,6 @@ class Rectangle implements Polygon {
     private int[] sides = new int[4];
     private float perimeter;
 
-   
     public void setSides(int[] sides) {
         this.sides = sides;
         this.perimeter = 0;
@@ -43,7 +41,6 @@ class Rectangle implements Polygon {
         }
     }
 
-    
     public void showPerimeter() {
         System.out.println("Perimeter: " + perimeter);
     }
@@ -54,14 +51,15 @@ class Rectangle implements Polygon {
     }
 }
 
-public class Main5 {
+public class prog {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Square");
         System.out.print("Square side: ");
         int squareSide = sc.nextInt();
-        int[] squareSides = {squareSide, squareSide, squareSide, squareSide};
+        int[] squareSides = { squareSide, squareSide, squareSide, squareSide };
         Square square = new Square();
         square.setSides(squareSides);
         square.Area();
@@ -72,7 +70,7 @@ public class Main5 {
         int rectWidth = sc.nextInt();
         System.out.print("Rectangle length: ");
         int rectLength = sc.nextInt();
-        int[] rectSides = {rectWidth, rectLength, rectWidth, rectLength};
+        int[] rectSides = { rectWidth, rectLength, rectWidth, rectLength };
         Rectangle rectangle = new Rectangle();
         rectangle.setSides(rectSides);
         rectangle.Area();
