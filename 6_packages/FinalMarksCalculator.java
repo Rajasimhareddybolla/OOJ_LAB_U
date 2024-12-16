@@ -20,7 +20,7 @@ public class FinalMarksCalculator {
 
             System.out.print("Enter USN for Student " + (i + 1) + ": ");
             students[i].usn = sc.next();
-            sc.nextLine();  // Consume the newline left by next()
+            sc.nextLine(); // Consume the newline left by next()
 
             System.out.print("Enter Name for Student " + (i + 1) + ": ");
             students[i].name = sc.nextLine();
@@ -49,7 +49,8 @@ public class FinalMarksCalculator {
             System.out.println("Course\tInternal\tSEE\tFinal Marks");
             for (int j = 0; j < 5; j++) {
                 int finalMark = internalMarks[i].getInternalMarks()[j] + seeMarks[i].getSEEMarks()[j];
-                System.out.println("Course " + (j + 1) + ":\t" + internalMarks[i].getInternalMarks()[j] + "\t\t" + seeMarks[i].getSEEMarks()[j] + "\t" + finalMark);
+                System.out.println("Course " + (j + 1) + ":\t" + internalMarks[i].getInternalMarks()[j] + "\t\t"
+                        + seeMarks[i].getSEEMarks()[j] + "\t" + finalMark);
             }
         }
         sc.close();
